@@ -22,9 +22,9 @@ export default {
         const prompt = `Your Tasks:
 1. Generate Hashtags
 - Always include the static hashtag: #GR8R
-- ${isPivotYear
+- ${(isPivotYear
   ? `Also include these static hashtags: #ThePivotYear #briannawiest and generate 3 additional trending hashtags based on the video’s key themes.`
-  : `Generate 5 additional trending hashtags based on the video’s key themes.`}
+  : `Generate 5 additional trending hashtags based on the video’s key themes.`)}
 - Ensure all hashtags use CamelCase (e.g., #MindsetShift).
 - Do not repeat or modify static hashtags.`
 
