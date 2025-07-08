@@ -1,0 +1,7 @@
+name = "gr8r-socialcopy-worker"
+type = "javascript"
+compatibility_date = "2024-07-08"
+main = "index.js"
+
+# No secrets declared here — use the Cloudflare dashboard to add:
+# OPENAI_API_KEY
