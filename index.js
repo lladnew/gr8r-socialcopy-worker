@@ -26,7 +26,7 @@ export default {
   ? `Also include these static hashtags: #ThePivotYear #briannawiest and generate 3 additional trending hashtags based on the video’s key themes.`
   : `Generate 5 additional trending hashtags based on the video’s key themes.`)}
 - Ensure all hashtags use CamelCase (e.g., #MindsetShift).
-- Do not repeat or modify static hashtags.`
+- Do not repeat or modify static hashtags.
 
 2. Generate social media copy (hook + body + Call to Action). Keep the content compelling and concise while maintaining the brand voice. Ensure sentences are complete and do not get cut off mid-thought.
 - Format the copy as follows:
