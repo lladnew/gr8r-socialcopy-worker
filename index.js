@@ -1,3 +1,6 @@
+// v1.0.2 gr8r-socialcopy-worker
+// updated line 20 to match any case of the string pivot year
+// tweaked prompt to always include GR8R hashtag
 // v1.0.1 gr8r-socialcopy-worker
 // Generates Social Copy (Hashtags, Hook, Body, CTA) from transcript
 // Adjusted: Static hashtags included only if title contains 'Pivot Year'
@@ -15,13 +18,15 @@ export default {
           return new Response('Missing required fields: transcript or title', { status: 400 });
         }
 
-        const isPivotYear = title.includes('Pivot Year');
+        const isPivotYear = title.toLowerCase().includes('pivot year');
         const prompt = `Your Tasks:
 1. Generate Hashtags
-- ${isPivotYear ? `Generate 3 trending hashtags based on the video’s key themes.
-- Combine them with these static hashtags: #GR8R #ThePivotYear #briannawiest.` : `Generate 6 trending hashtags based on the video’s key themes.`}
+- Always include the static hashtag: #GR8R
+- ${isPivotYear
+  ? `Also include these static hashtags: #ThePivotYear #briannawiest and generate 3 additional trending hashtags based on the video’s key themes.`
+  : `Generate 5 additional trending hashtags based on the video’s key themes.`}
 - Ensure all hashtags use CamelCase (e.g., #MindsetShift).
-- Do not repeat or modify static hashtags if they are included.
+- Do not repeat or modify static hashtags.`
 
 2. Generate social media copy (hook + body + Call to Action). Keep the content compelling and concise while maintaining the brand voice. Ensure sentences are complete and do not get cut off mid-thought.
 - Format the copy as follows:
